@@ -29,16 +29,22 @@ Downloading dependencies
  > Git download
      $ GIT_BIN clone https://github.com/CocoaLumberjack/CocoaLumberjack.git PROJECT/Pods/CocoaLumberjack --template= --single-branch --depth 1 --branch 3.0.0
      Cloning into 'PROJECT/Pods/CocoaLumberjack'...
-     Note: checking out '96f5978ea6339f17069d74c4652c79dee8f760b7'.
+     Note: switching to '96f5978ea6339f17069d74c4652c79dee8f760b7'.
 
      You are in 'detached HEAD' state. You can look around, make experimental
      changes and commit them, and you can discard any commits you make in this
-     state without impacting any branches by performing another checkout.
+     state without impacting any branches by switching back to a branch.
 
      If you want to create a new branch to retain commits you create, you may
-     do so (now or later) by using -b with the checkout command again. Example:
+     do so (now or later) by using -c with the switch command. Example:
 
-       git checkout -b new_branch_name
+       git switch -c <new-branch-name>
+
+     Or undo this operation with:
+
+       git switch -
+
+     Turn off this advice by setting config variable advice.detachedHead to false
 
 
 -> Installing asserts (0.0.1)
